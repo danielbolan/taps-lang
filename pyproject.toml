@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "tapslang"
+version = "0.1.0"
+description = "A bf-like interpreter built on Spotify playlists"
+authors = ["Daniel Bolan <daniel.c.bolan@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+spotipy = "^2.23.0"
+keyring = "^24.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+setup = "tapslang.spotify:save_credentials"
+taps = "tapslang.taps:main"
